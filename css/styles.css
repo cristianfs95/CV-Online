@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+
+@import url('tablet.css') only (min-width: 426px);
+@import url('desk.css') only (min-width: 1025px);
+
+/**
+*<!-- Mobile First FTW -->
+***      from 320px
+***       to 425px
+**/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    font-family: 'Raleway', 'Roboto', sans-serif;
+    background-color: #9c9a9a;
+    height: 100%;
+    width: 100%;
+    max-width: 100vw;
+
+}
+
+html {
+    font-size: 16px;
+}
+
+
+/********************* Home Style *********************/
+
+#landing-image {
+    height: 130vh;
+    width: 100%;
+    background: url(/images/landing_page.jpg);
+    background-size: 280% 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    z-index: 1;
+}
+
+#landing-image header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+#landing-image header .buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#landing-image header .buttons .media-btn {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.media-btn i {
+    cursor: pointer;
+}
+
+#landing-image header .buttons .toogle-nav label #menu-btn {
+    position: fixed;
+    transform: scale(1.9) translate(1px, 25px);
+    opacity: 0.8;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after {
+  transition: all 0.4s ease, transform 0s;
+}
+
+#landing-image header .buttons #cbox {
+    position: fixed;
+    right: 10px;
+    top: 37px;
+    cursor: pointer;
+    background-color: red;
+
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index: 101;
+}
+
+#landing-image header .buttons .toogle-nav label {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    top: 37px;
+
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    z-index: 101;
+}
+
+#landing-image header .buttons .toogle-nav {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+#landing-image header .buttons .toogle-nav .ul-menu-hide {
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    display: none;
+    position: fixed;
+
+    z-index: 99;
+}
+
+#landing-image header .buttons .toogle-nav .ul-menu-hide .ul-menu {
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(44, 62, 80, .8);
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-flow: wrap;
+
+    padding-top: 2rem;
+    right: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 0.28rem;
+
+    transition: opacity 280ms ease-in-out;
+}
+
+#landing-image header .buttons .toogle-nav .ul-menu li {
+    border: 1px solid white;
+    padding: 0 0.4rem 0 0.4rem;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 13%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-top: 0;
+    border-bottom: 0;
+
+    transition: border-left 280ms ease-in-out;
+}
+
+#landing-image header .buttons .toogle-nav .ul-menu li:hover {
+    border-left: 2px solid #15a6e4;
+    border-right: 2px solid #15a6e4;
+    background-color: rgba(21, 166, 228, .1);
+}
+
+#landing-image header .buttons .toogle-nav .ul-menu li a {
+    color: rgba(189, 195, 199,1);
+    list-style: none;
+    font-size: 1.2rem;
+    list-style: none;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#landing-image h1 {
+    font-family: 'first_take';
+    text-align: center;
+    opacity: 0.7;
+    font-size: 4.1rem;
+
+    position: absolute;
+    width: 65%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: pulse 1.33s ease-in 9;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+    0% {
+    font-size: 4.1rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+
+    10% {
+    font-size: 4.2rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+
+    }
+
+    30% {
+    font-size: 4.6rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+
+    50% {
+    font-size: 5rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+
+    70% {
+    font-size: 4.6rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+
+    90% {
+    font-size: 4.2rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+
+    100% {
+    font-size: 4.1rem;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    }
+}
+
+.section-title-01 {
+    display: flex;
+    position: absolute;
+
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 25%;
+    height: 80%;
+}
+
+#landing-image .section-title-01 h2 {
+    order: 1;
+    font-family: serif;
+    font-size: 6rem;
+    opacity: 0.7;
+    margin-left: auto;
+}
+
+#landing-image .section-title-01 h3 {
+    transform: rotate(-90deg);
+    font-family: 'Roboto';
+    height: auto;
+    width: auto;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    order: 3;
+    margin: 1rem 0 0 .9rem;
+}
+
+#landing-image .section-title-01 svg {
+    display: none;
+    order: 2;
+    margin-top: 70px;
+    stroke: black;
+    stroke-width: 6;
+    opacity: 0.6;
+}
+
+#landing-image .section-title-01 svg line {
+    transform: translate(65%);
+}
+
+.fixed-nav {
+    display: none;
+    position: fixed;
+    align-self:center;
+    justify-content: flex-end;
+    right: 2vw;
+    top: 35vh;
+    z-index: 1;
+}
+
+nav svg line {
+    stroke: black;
+    stroke-width: 8;
+    opacity: 0.6;
+}
+
+nav ul li:first-child a svg line {
+    animation: ver 280ms forwards;
+}
+
+@keyframes ver {
+    from { opacity: 0; }
+    to { opacity: 0.9; }
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav svg {
+    clear: both;
+    float: right;
+    margin: 20px;
+}
+
+
+/**************** End Home Style ******************/
+
+/****************** About Style ******************/
+
+#about {
+    background: #f5f5f5;
+    border: .5px solid grey;
+}
+
+#about .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+#about .section-title-02 {
+    display: flex;
+    position: relative;
+
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    height: 35vh;
+    width: 80%;
+    float: right;
+}
+
+#about .content .section-title-02 h2 {
+    font-family: serif;
+    font-size: 6.5em;
+    opacity: 0.7;
+}
+
+#about .content .section-title-02 h3 {
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+
+#about .section-title-02 svg line {
+    stroke: black;
+    stroke-width: 7;
+    opacity: 0.7;
+    align-self: center;
+}
+
+#about .content .who-am-i {
+    height: auto;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 2rem 2rem 0 2rem;
+    text-align: justify;
+}
+
+#about .content .who-am-i h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: #15a6e4 solid 4px;
+}
+
+#about .content .who-am-i h4 {
+    padding-bottom: 1.4rem;
+    line-height: 2rem;
+}
+
+#about .content .who-am-i p {
+    line-height: 2.5em;
+    padding-bottom: 2rem;
+}
+
+#about .content .personal-info {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 0rem 2rem 0 2rem;
+}
+
+#about .content .personal-info h2 {
+    margin-bottom: 2rem;
+    border-bottom: #15a6e4 solid 4px;
+}
+
+#about .content .personal-info p {
+    line-height: 2rem;
+    margin-left: 1rem;
+ }
+
+#about .content .personal-info p:last-child {
+    padding-bottom: 2rem;
+ }
+
+#about .content .my-expertise {
+    flex: 1;
+    width: 100%;
+
+    background-color: #f5f5f5;
+    padding: 0rem 2rem 0 2rem;
+    border-right: .5px solid grey;
+}
+
+#about .content .my-expertise h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: #15a6e4 solid 4px;
+}
+
+#about .content .my-expertise h4 {
+    line-height: 2rem;
+}
+
+#about .content .my-expertise p {
+    padding-bottom: 1rem;
+}
+
+#about .content .my-expertise p:last-of-type {
+    padding-bottom: 2.3rem;
+}
+
+#about .my-expertise .dwn-btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e7e7e7;
+    color: black;
+    border-radius: 12px;
+    width: 80vw;
+    height: 4rem;
+    text-align: center;
+    border: .5px solid grey;
+
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+
+#about .my-expertise .dwn-btn:hover {
+    cursor: pointer;
+    background-color: rgb(231, 231, 231, 0.4);
+    font-size: 17px;
+    font-weight: 500;
+    border-color: #15a6e4;
+    transition: all 280ms ease-out;
+}
+
+#about .content .my-expertise .dwn-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+#about .my-expertise .dwn-btn a:hover {
+    color: #15a6e4;
+    transition: color 280ms ease-out;
+}
+
+/****************** End About Style ******************/
+
+/****************** Portfolio Style ******************/
+#portfolio {
+    background: #f5f5f5;
+    position: relative;
+    border-left: .5px solid grey;
+    border-right: .5px solid grey;
+    width: 100%;
+    overflow: hidden;
+}
+
+#portfolio .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio .content h2 {
+    font-size: 2em;
+    width: 80%;
+    text-align: center;
+    margin: 0 2rem 2rem 2rem;
+    padding-top: 2rem;
+    border-bottom: #15a6e4 solid 4px;
+}
+
+#portfolio .content .gallery {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 5% 0 5%;
+    max-width: 90vw;
+    padding-bottom: 6%;
+}
+
+#portfolio .content .gallery .item img {
+    max-width: 100vw;
+    max-height: 30vh;
+
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    margin-right: 10px;
+    object-fit: cover;
+    filter: brightness(80%);
+    cursor: pointer;
+    border: 3px solid rgba(0,0,0,0.9);
+}
+
+#portfolio .content .gallery .item img:last-child {
+    margin-bottom: auto;
+}
+
+#portfolio .content .gallery .item img:hover {
+    filter: brightness(90%);
+}
+
+#portfolio .section-title-03 {
+    display: flex;
+    position: relative;
+
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    height: 15%;
+    width: 70%;
+    margin-left: 15%;
+    padding-bottom: 1.4rem;
+}
+
+#portfolio .section-title-03 h2 {
+    font-family: serif;
+    font-size: 4rem;
+    opacity: 0.7;
+}
+
+#portfolio .section-title-03 h3 {
+    font-family: 'Roboto';
+    font-size: 2.2rem;
+    opacity: 0.8;
+}
+
+#portfolio .section-title-03 svg line {
+    stroke: black;
+    stroke-width: 7;
+    opacity: .7;
+    align-self: center;
+}
+
+/****************** End Portfolio Style ******************/
+
+/********************* Contact Style *********************/
+
+#contact {
+    border-top: .5px solid grey;
+    border-bottom: .5px solid grey;
+    overflow: hidden;
+}
+
+#contact .content {
+    position: absolute;
+    width: 100%;
+}
+
+#contact .content .mapouter {
+    filter: grayscale(100%);
+    position: relative;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#contact .content .mapouter .gmap_canvas {
+    background: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#contact .content .mapouter .gmap_canvas iframe {
+    height: 100vh;
+    width: 100%;
+    frameborder: 0;
+    scrolling: 0;
+    marginheight: 0;
+    marginwidth: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#contact .content .contact-form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -82%;
+    width: 19rem;
+    height: 24rem;
+    padding: 3% 5% 3% 5%;
+    background: #333333;
+    opacity: 0.85;
+}
+
+#contact .content .contact-form .contact-title {
+    margin-bottom: 13%;
+    color: white;
+    border-bottom: #15a6e4 solid 4px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    width: 11.5rem;
+}
+
+#contact .content .contact-form input:not(:last-child) {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-family: 'Raleway';
+    padding-left: 10px;
+}
+
+#contact .content .contact-form textarea {
+    width: 100%;
+    height: 110px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-family: 'Raleway';
+    padding: 5px 0px 0px 10px;
+}
+
+#contact .content .contact-form input:last-child {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-family: 'Raleway';
+}
+
+/******************* End Contact Style *******************/
+
+/******************** Footer Style ***********************/
+
+footer {
+    position: absolute;
+    transform: translatey(356%);
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+}
+
+footer .content hr {
+    border: none;
+    border-bottom: solid #15a6e4;
+    background: none;
+    margin: 0 auto;
+}
+
+/****************** End Footer Style ******************/
